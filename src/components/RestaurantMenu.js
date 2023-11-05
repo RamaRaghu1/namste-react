@@ -82,14 +82,6 @@ const RestaurantMenu = () => {
           />
         ))}
       </div>
-
-      {/* <ul>
-        {itemCards.map((item) => (
-          <li key={item.card.info.id}>
-            {item.card.info.name} - {item.card.info.price}
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 };

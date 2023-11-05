@@ -46,54 +46,6 @@ const Body = () => {
   }
   return (
     <div id="restaurants" className="py-10">
-      {/* <div className="search m-4 p-4"> */}
-      {/* <input
-            type="text"
-            className="border border-solid border-black"
-            value={searchText}
-            onChange={(e) => {
-              setSearchText(e.target.value);
-            }}
-          /> */}
-      {/* <button
-            className="px-4 py-2 m-4 bg-green-100 rounded-lg"
-            onClick={() => {
-              console.log(searchText);
-
-              const filteredRestaurant = listOfRestaurants.filter((res) =>
-                res.info.name.toLowerCase().includes(searchText.toLowerCase())
-              );
-
-              setFilteredRestaurant(filteredRestaurant);
-            }}
-          >
-            Search
-          </button> */}
-      {/* </div> */}
-      {/* <div className="search m-4 px-4 flex flex-row justify-evenly"> */}
-      {/* <div className=" flex flex-row justify-evenly">
-          <div>
-            <MdOutlineFoodBank className="w-9 h-9" />
-          </div>
-          <p className="font-bold text-xl md:text-3xl  pb-4">
-            Restaurants with online food delivery
-          </p>
-
-          <button
-            className="px-4 py-2 m-4 bg-gray-100 rounded-lg line-clamp-2 "
-            onClick={() => {
-              const filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4
-              );
-              setFilteredRestaurant(filteredList);
-            }}
-          >
-            <span>
-              <IoFilter />
-            </span>{" "}
-          </button>
-        </div> */}
-      {/* </div> */}
       <div className="mx-auto my-3 lg:my-10 md:w-4/5 overflow-hidden">
         <div className="grid justify-items-center grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-4  gap-y-12 lg:gap-x-8 md:gap-x-12 ">
           {!filteredRestaurant || filteredRestaurant.length === 0
@@ -103,12 +55,7 @@ const Body = () => {
                   key={restaurant.info.id}
                   to={"/restaurants/" + restaurant.info.id}
                 >
-                  {/* If the restaurant is pure veg use new component */}
-                  {/* {restaurant?.info?.promoted ? (
-                    <RestaurantWithPromoted resData={restaurant} />
-                  ) : ( */}
                   <RestaurantCard resData={restaurant} />
-                  {/* )} */}
                 </Link>
               ))}
         </div>

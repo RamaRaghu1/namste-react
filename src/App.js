@@ -17,8 +17,7 @@ const AppLayout = () => {
       <div className="app">
         {/* Header */}
         <Header />
-        <Outlet className="m-h-screen flex-grow" />
-        <Footer />
+        <Outlet />
       </div>
     </Provider>
   );
@@ -29,6 +28,7 @@ const Index = () => {
     <>
       <Hero />
       <Body />
+      <Footer />
     </>
   );
 };

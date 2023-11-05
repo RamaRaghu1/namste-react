@@ -4,11 +4,8 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
 const RestaurantCategories = ({ data, showItems, setShowIndex }) => {
-  // const [showItems, setShowItems] = useState(false);
-
   const handleClick = () => {
     setShowIndex();
-    // setShowItems(!showItems);
   };
   return (
     <>
