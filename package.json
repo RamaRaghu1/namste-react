@@ -1,0 +1,40 @@
+{
+  "name": "namste-react",
+  "version": "1.0.0",
+  "description": "This is a food ordering app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamaRaghu1/namste-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Rama Raghu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamaRaghu1/namste-react/issues"
+  },
+  "homepage": "https://github.com/RamaRaghu1/namste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.30",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.15.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
