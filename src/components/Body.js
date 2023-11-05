@@ -1,4 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
+import {
+  RESTAURANT_LIST_DESKTOP,
+  RESTAURANT_LIST_MOBILE,
+} from "../utils/constants";
 import { IoFilter } from "react-icons/io5";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { useEffect, useState } from "react";
@@ -19,8 +23,11 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184"
+      isMobile()
+        ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
+        : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
     );
+
     const json = await data.json();
 
     console.log(json);
