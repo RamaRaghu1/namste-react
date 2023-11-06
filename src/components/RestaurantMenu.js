@@ -29,12 +29,20 @@ const RestaurantMenu = () => {
 
   console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]);
 
-  const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
-      (c) =>
-        c.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    );
+  const resDesktopMenu =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.slice(1, -2);
+
+  const resMobileMenu =
+    resInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards.slice(1, -2);
+
+  const categories = [
+    ...(resDesktopMenu || []),
+    ...(resMobileMenu || []),
+  ].filter(
+    (c) =>
+      c.card?.card?.["@type"] ===
+      "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  );
   console.log(categories);
 
   return (
