@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { isMobile } from "./Helper";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -29,15 +30,37 @@ const Body = () => {
     );
 
     const json = await data.json();
+    let resList;
 
-    console.log(json);
-    setListOfRestaurants(
-      json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurant(
-      json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    if (isMobile()) {
+      resList =
+        json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+          ?.restaurants;
+    } else {
+      const list0 =
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      const list1 =
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      const list2 =
+        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+
+      resList = list0 || list1 || list2;
+    }
+    setListOfRestaurants(resList);
+    setFilteredRestaurant(resList);
   };
+
+  // console.log(json);
+  // setListOfRestaurants(
+  //   json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  // );
+  // setFilteredRestaurant(
+  //   json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  // );
+
   // console.log(
   //   json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   // );
