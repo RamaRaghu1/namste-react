@@ -30,10 +30,10 @@ const RestaurantMenu = () => {
   console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]);
 
   const resDesktopMenu =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.slice(1, -2);
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   const resMobileMenu =
-    resInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards.slice(1, -2);
+    resInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   const categories = [
     ...(resDesktopMenu || []),
