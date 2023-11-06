@@ -24,10 +24,10 @@ const RestaurantMenu = () => {
     sla: { deliveryTime },
   } = resInfo?.cards[0]?.card?.card?.info;
 
-  const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+  // const { itemCards } =
+  //   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-  console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]);
+  // console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]);
 
   const resDesktopMenu =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;

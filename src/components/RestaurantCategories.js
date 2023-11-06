@@ -7,6 +7,8 @@ const RestaurantCategories = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
     setShowIndex();
   };
+
+  // const { title, itemCards, categories } = menu;
   return (
     <>
       {/* Header */}
