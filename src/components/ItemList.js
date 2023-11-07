@@ -21,7 +21,7 @@ const ItemList = ({ items }) => {
               className="text-left p-2 my-2 border-b flex flex-row justify-between "
             >
               {/* food info */}
-              <div className="flex flex-col w-9/12">
+              <div className="flex flex-col w-9/12 p-2">
                 <span className="font-semibold"> {item.card.info.name}</span>
 
                 <span>
@@ -36,7 +36,7 @@ const ItemList = ({ items }) => {
               </div>
 
               <div className="w-3/12 p-2">
-                <div className="w-28  max-h-24 shrink-0 relative flex justify-center">
+                <div className="w-28  max-h-24 shrink-0 relative flex justify-center p-2">
                   {item.card.info.imageId ? (
                     <div className="w-22 max-h-24 px-0 shrink-0 relative flex justify-center bg-black">
                       <img
