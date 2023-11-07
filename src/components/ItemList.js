@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
   };
 
   return (
-    <div className="flex p-4 ">
+    <div className="flex p-2">
       <div className="flex flex-col space-y-2 justify-between w-9/12">
         {items.map((item) => (
           <div
