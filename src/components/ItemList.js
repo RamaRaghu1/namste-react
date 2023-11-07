@@ -13,7 +13,7 @@ const ItemList = ({ items }) => {
 
   return (
     <div>
-      <div className="flex p-4">
+      <div className="flex ">
         <div className="flex flex-col space-y-2 justify-between w-9/12 p-2">
           {items.map((item) => (
             <div
