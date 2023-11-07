@@ -17,7 +17,7 @@ const ItemList = ({ items }) => {
         {items.map((item) => (
           <div
             key={item.card.info.id}
-            className="text-left p-2 my-2 border-b flex flex-row justify-between "
+            className="text-left py-4 my-2 border-b flex flex-row justify-between "
           >
             {/* food info */}
             <div className="flex flex-col w-9/12 p-2">
@@ -45,7 +45,7 @@ const ItemList = ({ items }) => {
                     />
 
                     <button
-                      className="absolute -bottom-2 w-24 text-center bg-white text-green-600 px-2  py-2 text-xs font-bold border border-slate-300 rounded-lg"
+                      className="absolute -bottom-6 w-24 text-center bg-white text-green-600 px-2  py-2 text-xs font-bold border border-slate-300 rounded-lg"
                       onClick={() => handleAddItem(item)}
                     >
                       Add+
