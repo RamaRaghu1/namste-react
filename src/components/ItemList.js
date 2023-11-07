@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
   return (
     <div>
       <div className="flex p-4">
-        <div className="flex flex-col space-y-2 justify-between w-9/12">
+        <div className="flex flex-col space-y-2 justify-between w-9/12 p-4">
           {items.map((item) => (
             <div
               key={item.card.info.id}
