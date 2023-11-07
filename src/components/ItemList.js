@@ -38,7 +38,7 @@ const ItemList = ({ items }) => {
               <div className="w-3/12 p-4">
                 <div className="w-28  max-h-24 shrink-0 relative flex justify-center">
                   {item.card.info.imageId ? (
-                    <div className="w-28  max-h-24 shrink-0 relative flex justify-center">
+                    <div className="w-26 max-h-24 shrink-0 relative flex justify-center">
                       <img
                         src={CDN_URL + item.card.info.imageId}
                         loading="lazy"

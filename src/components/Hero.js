@@ -16,11 +16,11 @@ const Hero = () => {
             {/* About */}
             <div className="text-start sm:max-w-md space-y-4 ">
               <h1 className="text-4xl font-extrabold  lg:text-6xl text-[#45474B] font-serif">
-                Order food online in{" "}
-                <span className="text-[#BB2525]">Chennai</span>
+                <span className="text-[#BB2525]">Hungry?</span> You're at the
+                Right Place!
               </h1>
 
-              <p className="text-[#BB2525] font-semibold">
+              <p className="text-[#BB2525] font-bold">
                 The World of Food, Just a Click Away.
               </p>
               {/* button */}

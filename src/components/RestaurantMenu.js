@@ -60,7 +60,7 @@ const RestaurantMenu = () => {
             </div>
           </div>
         </div>
-        <div className="w-full my-4 border border-dashed"></div>
+        <div className=" my-4 border border-dashed"></div>
 
         {/* icons */}
 
@@ -80,7 +80,7 @@ const RestaurantMenu = () => {
       </div>
       {/* Categories Accordion */}
 
-      <div className="md:w-6/12 w-3/5 mx-auto my-5 bg-gray-100 justify-between">
+      <div className="md:w-6/12 w-full relative mx-auto my-5 bg-gray-100 justify-between">
         {categories.map((category, index) => (
           <RestaurantCategories
             key={category?.card?.card.title}
