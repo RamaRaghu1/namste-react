@@ -13,8 +13,8 @@ const ItemList = ({ items }) => {
 
   return (
     <div>
-      <div className="flex ">
-        <div className="flex flex-col space-y-2 justify-between w-9/12 p-2">
+      <div className="flex p-4">
+        <div className="flex flex-col space-y-2 justify-between w-9/12">
           {items.map((item) => (
             <div
               key={item.card.info.id}
@@ -38,7 +38,7 @@ const ItemList = ({ items }) => {
               <div className="w-3/12 p-2">
                 <div className="w-28  max-h-24 shrink-0 relative flex justify-center">
                   {item.card.info.imageId ? (
-                    <div className="w-22 max-h-24 px-0 shrink-0 relative flex justify-center">
+                    <div className="w-22 max-h-24 px-0 shrink-0 relative flex justify-center bg-black">
                       <img
                         src={CDN_URL + item.card.info.imageId}
                         loading="lazy"
