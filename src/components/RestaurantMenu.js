@@ -80,7 +80,7 @@ const RestaurantMenu = () => {
       </div>
       {/* Categories Accordion */}
 
-      <div className="md:w-6/12 w-10/12 relative mx-auto my-5 bg-gray-100 justify-between">
+      <div className="md:w-6/12 w-10/12 relative mx-auto my-5 bg-gray-100 justify-between overflow-hidden">
         {categories.map((category, index) => (
           <RestaurantCategories
             key={category?.card?.card.title}
