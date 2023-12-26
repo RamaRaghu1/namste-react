@@ -26,8 +26,8 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(
       isMobile()
-        ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
-        : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
+        ? "https://cors-anywhere.herokuapp.com/?" + RESTAURANT_LIST_MOBILE
+        : "https://cors-anywhere.herokuapp.com/?" + RESTAURANT_LIST_DESKTOP
     );
 
     const json = await data.json();
