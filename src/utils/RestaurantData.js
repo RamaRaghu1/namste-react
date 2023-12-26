@@ -1,6 +1,7 @@
 // 20231227045658
 // https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
 
+const Data=
 {
   "statusCode": 0,
   "data": {
@@ -6156,3 +6157,4 @@
   "deviceId": "a2ec3fd1-346a-fc95-d86d-9ba0da0e1bad",
   "csrfToken": "CVu1d5wYrc4Y-mc3VxfJw7fF3oJ9XV-XQpc3kBdY"
 }
+export default data;
