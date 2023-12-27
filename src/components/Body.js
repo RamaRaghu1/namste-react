@@ -28,7 +28,7 @@ const Body = () => {
       isMobile()
         ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
         : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
-, { mode: 'no-cors' }
+
     );
 
     const json = await data.json();
