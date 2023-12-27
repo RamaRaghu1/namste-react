@@ -53,9 +53,11 @@ const Body = () => {
     }
     setListOfRestaurants(resList);
     setFilteredRestaurant(resList);
-  };
 
   console.log(json);
+  };
+
+
   // setListOfRestaurants(
   //   data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   // );
