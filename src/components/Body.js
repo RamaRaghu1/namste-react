@@ -10,7 +10,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { isMobile } from "./Helper";
-import data from "../utils/RestaurantData.js";
+// import data from "../utils/RestaurantData.js";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -24,49 +24,49 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    // const data = await fetch(
-    //   isMobile()
-    //     ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
-    //     : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
+    const data = await fetch(
+      isMobile()
+        ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
+        : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
 
-    // );
+    );
 
-    // const json = await data.json();
-    // let resList;
+    const json = await data.json();
+    let resList;
 
-  //   if (isMobile()) {
-  //     resList =
-  //       json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
-  //         ?.restaurants;
-  //   } else {
-  //     const list0 =
-  //       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-  //         ?.restaurants;
-  //     const list1 =
-  //       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-  //         ?.restaurants;
-  //     const list2 =
-  //       json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-  //         ?.restaurants;
+    if (isMobile()) {
+      resList =
+        json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+          ?.restaurants;
+    } else {
+      const list0 =
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      const list1 =
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      const list2 =
+        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
 
-  //     resList = list0 || list1 || list2;
-  //   }
-  //   setListOfRestaurants(resList);
-  //   setFilteredRestaurant(resList);
-  // };
+      resList = list0 || list1 || list2;
+    }
+    setListOfRestaurants(resList);
+    setFilteredRestaurant(resList);
+  };
 
-  // console.log(json);
-  setListOfRestaurants(
-    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  );
-  setFilteredRestaurant(
-    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  );
+  console.log(json);
+  // setListOfRestaurants(
+  //   data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  // );
+  // setFilteredRestaurant(
+  //   data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  // );
 
-  console.log(
-    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  );
-  }
+  // console.log(
+  //   data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  // );
+  // }
   const onlineStatus = useOnlineStatus();
 
   if (onlineStatus === false) {
