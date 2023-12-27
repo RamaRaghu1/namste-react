@@ -10,7 +10,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { isMobile } from "./Helper";
-// import data from "../utils/RestaurantData";
+import data from "../utils/RestaurantData";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -32,7 +32,7 @@ const Body = () => {
     );
 
     const json = await data.json();
-    let resList;
+    let resList=data;
 
     if (isMobile()) {
       resList =
