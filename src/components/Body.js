@@ -10,7 +10,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { isMobile } from "./Helper";
-import data from "../utils/RestaurantData";
+import data from "../utils/RestaurantData.js";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -31,7 +31,7 @@ const Body = () => {
 
     // );
 
-    const json = await data.json();
+    // const json = await data.json();
     // let resList;
 
   //   if (isMobile()) {
@@ -57,14 +57,14 @@ const Body = () => {
 
   console.log(json);
   setListOfRestaurants(
-    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
   setFilteredRestaurant(
-    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
 
   console.log(
-    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
 
   const onlineStatus = useOnlineStatus();
