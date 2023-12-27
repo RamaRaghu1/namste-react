@@ -26,8 +26,8 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(
       isMobile()
-        ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
-        : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
+        ?  RESTAURANT_LIST_MOBILE
+        :  RESTAURANT_LIST_DESKTOP
 
     );
 
