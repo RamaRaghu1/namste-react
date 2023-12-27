@@ -55,7 +55,7 @@ const Body = () => {
   //   setFilteredRestaurant(resList);
   // };
 
-  console.log(json);
+  // console.log(json);
   setListOfRestaurants(
     data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
@@ -66,7 +66,7 @@ const Body = () => {
   console.log(
     data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
-
+);
   const onlineStatus = useOnlineStatus();
 
   if (onlineStatus === false) {
