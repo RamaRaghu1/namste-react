@@ -24,48 +24,48 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      isMobile()
-        ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
-        : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
+    // const data = await fetch(
+    //   isMobile()
+    //     ? "https://corsproxy.io/?" + RESTAURANT_LIST_MOBILE
+    //     : "https://corsproxy.io/?" + RESTAURANT_LIST_DESKTOP
 
-    );
+    // );
 
     const json = await data.json();
-    let resList=data;
+    // let resList;
 
-    if (isMobile()) {
-      resList =
-        json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
-          ?.restaurants;
-    } else {
-      const list0 =
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants;
-      const list1 =
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants;
-      const list2 =
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants;
+  //   if (isMobile()) {
+  //     resList =
+  //       json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+  //         ?.restaurants;
+  //   } else {
+  //     const list0 =
+  //       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+  //         ?.restaurants;
+  //     const list1 =
+  //       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+  //         ?.restaurants;
+  //     const list2 =
+  //       json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+  //         ?.restaurants;
 
-      resList = list0 || list1 || list2;
-    }
-    setListOfRestaurants(resList);
-    setFilteredRestaurant(resList);
-  };
+  //     resList = list0 || list1 || list2;
+  //   }
+  //   setListOfRestaurants(resList);
+  //   setFilteredRestaurant(resList);
+  // };
 
-  // console.log(json);
-  // setListOfRestaurants(
-  //   json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  // );
-  // setFilteredRestaurant(
-  //   json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  // );
+  console.log(json);
+  setListOfRestaurants(
+    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
+  setFilteredRestaurant(
+    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
 
-  // console.log(
-  //   json.data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  // );
+  console.log(
+    json.data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
 
   const onlineStatus = useOnlineStatus();
 
