@@ -54,7 +54,7 @@ const Body = () => {
     setListOfRestaurants(resList);
     setFilteredRestaurant(resList);
 
-  console.log(json);
+  // console.log(json);
   };
 
 
